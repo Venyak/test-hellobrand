@@ -30,13 +30,12 @@ let swiper = new Swiper('.review__slider', {
 $('.modal__form').submit(function (e) {
   e.preventDefault();
 
-  let th = $(this);
-  let btn = th.find('.callback__btn');
+  let form = $(this);
 
   $.ajax({
-    url: '../mail/mail.php',
     type: 'POST',
-    data: th.serialize(),
+    url: '../mail/mail.php',
+    data: form.serialize(),
     success: function (data) {
       if (data == 1) {
         console.log('Чета не то');
