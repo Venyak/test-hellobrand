@@ -1,0 +1,189 @@
+.schedule {
+	padding-top: 80px;
+	padding-bottom: 178px;
+}
+
+/* .schedule__wrapper {
+	display: grid;
+	grid-template-columns: 470px 670px;
+	gap: 30px;
+} */
+
+.schedule__wrapper {
+	display: flex;
+	gap: 30px;
+}
+
+.schedule__list {
+	flex-direction: column;
+	gap: 20px;
+	display: flex;
+}
+
+.schedule__list-item {
+	width: 470px;
+	border-bottom: 1px solid #E7E7E7;
+	padding-bottom: 20px;
+}
+
+.schedule__date {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.schedule__menu {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 32px;
+	margin-top: 10px;
+}
+
+.schedule__dots {
+	color: #D3B47F;
+	letter-spacing: 2px;
+	margin-left: 12px;
+	margin-right: 6px;
+}
+
+.schedule__images {
+	position: relative;
+	width: 100%;
+}
+
+.schedule__images-first, .schedule__images-second, .schedule__images-rect {
+	position: absolute;
+}
+
+.schedule__images-first {
+	z-index: 2;
+	bottom: -83px;
+}
+
+.schedule__images-second {
+	z-index: 2;
+	top: 0;
+	left: 343px;
+}
+
+.schedule__images-rect {
+	bottom: 0;
+	left: 97px;
+}
+
+@media (max-width: 1000px) { 
+	.schedule {
+		padding-top: 60px;
+		padding-bottom: 158px;
+	}
+
+	.schedule__wrapper {
+		gap: 40px;
+	}
+
+	.schedule__list {
+		gap: 15px;
+	}
+
+	.schedule__list-item {
+		width: 420px;
+		padding-bottom: 20px;
+	}
+
+	.schedule__date {
+		font-size: 20px;
+	}
+
+	.schedule__menu {
+		font-size: 16px;
+		margin-top: 8px;
+	}
+
+	.schedule__images-first {
+		bottom: -1%;
+		width: 20vw;
+	}
+	
+	.schedule__images-second {
+		z-index: 2;
+		top: 0;
+		left: 55%;
+		width: 20vw;
+	}
+	
+	.schedule__images-rect {
+		bottom: 15%;
+		left: 8%;
+		width: 327px;
+	}
+}
+
+@media (max-width: 850px) { 
+	.schedule {
+		padding-top: 50px;
+		padding-bottom: 98px;
+	}
+
+	.schedule__images-first {
+		bottom: 8%;
+		width: 17vw;
+	}
+	
+	.schedule__images-second {
+		z-index: 2;
+		top: 10%;
+		left: 40%;
+		width: 17vw;
+	}
+	
+	.schedule__images-rect {
+		bottom: 30%;
+		left: 8%;
+		width: 30vw;
+	}
+
+}
+
+@media (max-width: 750px) {
+	.schedule__images-second {
+		display: none;
+	}
+
+	.schedule__images-first {
+		bottom: 30%;
+		left: 20%;
+		width: 20vw;
+	}
+
+	.schedule__images-rect {
+		bottom: 25%;
+		left: 5%;
+		width: 30vw;
+	}
+}
+
+@media (max-width: 650px) {
+	.schedule__images {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.schedule {
+    padding-top: 50px;
+    padding-bottom: 78px;
+	}
+
+	.schedule__list-item {
+		width: 100%;
+	}
+
+	.schedule__date {
+    font-size: 18px;
+	}
+
+	.schedule__menu {
+    font-size: 14px;
+    margin-top: 8px;
+	}
+}
