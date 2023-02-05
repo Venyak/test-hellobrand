@@ -33,7 +33,7 @@ $('.modal__form').submit(function (e) {
   let form = $(this);
 
   $.ajax({
-    type: 'POST',
+    method: 'POST',
     url: '../mail/mail.php',
     data: form.serialize(),
     success: function (data) {

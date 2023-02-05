@@ -3,8 +3,8 @@
 $to = "mafia.papyrus@yandex.ru";
 $from = "Заявка с сайта Tzeezotje";
 
-$name = $_POST['bio'];
-$phone = $_POST['phone'];
+$name = trim($_POST['bio']);
+$phone = trim($_POST['phone']);
 $page = 'Страница тест';
 
 $message = "Имя: $name \nТелефон: $phone"; 
