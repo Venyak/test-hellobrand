@@ -1,6 +1,5 @@
 import burgerMenu from './burger.js';
 import handlerModal from './modal.js';
-import sendForm from './mail.js';
 
 const presentReserbeBtn = document.querySelector('.present__reserve-btn');
 const pageOverlayModal = document.querySelector('.page__overlay-modal');
@@ -10,8 +9,6 @@ burgerMenu({
   selectorMenu: '.nav__list',
   selectorOpenMenu: 'nav__list-active',
 });
-
-sendForm();
 
 handlerModal(presentReserbeBtn, pageOverlayModal, 'page__overlay_modal-open', modalClose, 6);
 
@@ -27,4 +24,24 @@ let swiper = new Swiper('.review__slider', {
     nextEl: '.review__slider-button-next',
     prevEl: '.review__slider-button-prev',
   },
+});
+
+// Отправка формы
+$('.modal__form').submit(function (e) {
+  e.preventDefault();
+
+  let th = $(this);
+  let btn = th.find('.callback__btn');
+
+  $.ajax({
+    url: '../mail/mail.php',
+    type: 'POST',
+    data: th.serialize(),
+    success: function (data) {
+      if (data == 1) {
+        console.log('Чета не то');
+      }
+      console.log('Успешная отправка?');
+    },
+  });
 });
